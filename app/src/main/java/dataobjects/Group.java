@@ -1,4 +1,4 @@
-package jalal.com.hackpsu;
+package dataobjects;
 
 import java.util.ArrayList;
 
@@ -8,25 +8,16 @@ import java.util.ArrayList;
 public class Group {
     private String groupName;
     private ArrayList<User> userList;
-    private long startTime, endTime;
     private String studySubject;
     private ArrayList<String> studyMaterials;
+
+    private Schedule schedule;
 
     private Group(GroupBuilder builder) {
         this.groupName      = builder.groupName;
         this.userList       = builder.userList;
-        this.startTime      = builder.startTime;
-        this.endTime        = builder.endTime;
         this.studySubject   = builder.studySubjectName;
         this.studyMaterials = builder.studyMaterials;
-    }
-
-    public long getStartTime() {
-        return this.startTime;
-    }
-
-    public long getEndTime() {
-        return this.endTime;
     }
 
     public ArrayList<User> getUserList() {
@@ -48,15 +39,15 @@ public class Group {
     public static class GroupBuilder {
         private String groupName;
         private ArrayList<User> userList;
-        private long startTime, endTime;
         private String studySubjectName;
         private ArrayList<String> studyMaterials;
 
-        public GroupBuilder(String groupName, String subjectName, long startTime, long endTime) {
-            this.groupName = groupName;
-            this.startTime = startTime;
-            this.endTime = endTime;
-            this.studySubjectName = subjectName;
+        private Schedule schedule;
+
+        public GroupBuilder(String groupName, String subjectName, Schedule schedule) {
+            this.groupName          = groupName;
+            this.studySubjectName   = subjectName;
+            this.schedule           = schedule;
         }
 
         public GroupBuilder materials(ArrayList<String> studyMaterials) {

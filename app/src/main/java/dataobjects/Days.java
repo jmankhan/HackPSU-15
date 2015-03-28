@@ -1,4 +1,4 @@
-package jalal.com.hackpsu;
+package dataobjects;
 
 /**
  * Created by Jalal on 3/28/2015.
