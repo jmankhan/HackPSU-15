@@ -8,7 +8,11 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
+<<<<<<< HEAD
             android:name=".dataobjects.MainActivity"
+=======
+            android:name=".MainActivity"
+>>>>>>> d73bc2d46e3fc58f11218acd565ff0908f287d71
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

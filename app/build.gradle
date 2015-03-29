@@ -6,7 +6,11 @@ android {
 
     defaultConfig {
         applicationId "jalal.com.hackpsu"
+<<<<<<< HEAD
         minSdkVersion 12
+=======
+        minSdkVersion 15
+>>>>>>> d73bc2d46e3fc58f11218acd565ff0908f287d71
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
